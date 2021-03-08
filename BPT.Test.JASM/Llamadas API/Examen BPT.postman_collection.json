@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "388ec3d1-0181-4fe4-bad5-a6ac25559439",
+		"name": "Examen BPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "List Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44334/api/student",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Craete Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Jose Antonio Serrano\",\r\n    \"dateBirth\" : \"1986-01-26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/student",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"0ff8278f-cd1c-486b-989c-ee6ff4e0347e\",\r\n    \"name\" : \"Adrian Sandoval Perez\",\r\n    \"dateBirth\" : \"1988-11-26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/student/0ff8278f-cd1c-486b-989c-ee6ff4e0347e",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"student",
+								"0ff8278f-cd1c-486b-989c-ee6ff4e0347e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delte Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/student/0ff8278f-cd1c-486b-989c-ee6ff4e0347e",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"student",
+								"0ff8278f-cd1c-486b-989c-ee6ff4e0347e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assigments",
+			"item": [
+				{
+					"name": "List of assigment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44334/api/Assigment",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"Assigment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Assigment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\" : \"Matematicas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/Assigment/db8c622b-6c01-4c31-8d0a-a17aae809564",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"Assigment",
+								"db8c622b-6c01-4c31-8d0a-a17aae809564"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Assigment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\" : \"Matematicas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/Assigment",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"Assigment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Assigment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : \"db8c622b-6c01-4c31-8d0a-a17aae809564\",\r\n    \"Name\" : \"Taller de carpinteria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/Assigment/db8c622b-6c01-4c31-8d0a-a17aae809564",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"Assigment",
+								"db8c622b-6c01-4c31-8d0a-a17aae809564"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Assigment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44334/api/Assigment/db8c622b-6c01-4c31-8d0a-a17aae809564",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"Assigment",
+								"db8c622b-6c01-4c31-8d0a-a17aae809564"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
