@@ -14,5 +14,7 @@ namespace BPT.Test.JASM.BackEnd.DataAccess
         [StringLength(60, ErrorMessage = "Error, 60 character is the most value range permitted")]
         public string Name { get; set; }
 
+        public virtual ICollection<StudenAssigments> StudenAssigments { get; set; }
+
     }
 }

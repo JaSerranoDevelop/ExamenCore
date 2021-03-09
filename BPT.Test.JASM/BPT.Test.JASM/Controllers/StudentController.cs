@@ -36,7 +36,7 @@ namespace BPT.Test.JASM.Controllers
 
         // GET api/<StudenController>/5
         [HttpGet("{id}", Name = "GetStudent")]
-        public ActionResult<StudentDTO> Get(Guid id)
+        public ActionResult<StudentListAssigmentsDTO> Get(Guid id)
         {
            if (id == null)
                 return NotFound();

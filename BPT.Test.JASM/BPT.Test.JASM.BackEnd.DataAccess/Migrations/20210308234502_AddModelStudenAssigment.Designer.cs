@@ -4,14 +4,16 @@ using BPT.Test.JASM.BackEnd.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BPT.Test.JASM.BackEnd.DataAccess.Migrations
 {
     [DbContext(typeof(DBContext))]
-    partial class DBContextModelSnapshot : ModelSnapshot
+    [Migration("20210308234502_AddModelStudenAssigment")]
+    partial class AddModelStudenAssigment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,15 +39,16 @@ namespace BPT.Test.JASM.BackEnd.DataAccess.Migrations
 
             modelBuilder.Entity("BPT.Test.JASM.BackEnd.DataAccess.StudenAssigments", b =>
                 {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("IdAssignments")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdStudent")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("IdAssignments", "IdStudent");
-
-                    b.HasIndex("IdStudent");
+                    b.HasKey("Id");
 
                     b.ToTable("StudenAssigments");
                 });
@@ -73,13 +76,13 @@ namespace BPT.Test.JASM.BackEnd.DataAccess.Migrations
                 {
                     b.HasOne("BPT.Test.JASM.BackEnd.DataAccess.Assignments", "Assignments")
                         .WithMany("StudenAssigments")
-                        .HasForeignKey("IdAssignments")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BPT.Test.JASM.BackEnd.DataAccess.Student", "Student")
                         .WithMany("StudenAssigments")
-                        .HasForeignKey("IdStudent")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

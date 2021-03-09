@@ -1,4 +1,5 @@
 ﻿using BPT.Test.JASM.BackEnd.DataAccess;
+using BPT.Test.JASM.DTO;
 using BPT.Test.JASM.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -34,7 +35,7 @@ namespace BPT.Test.JASM.Controllers
 
         // GET api/<AssigmentController>/5
         [HttpGet("{id}", Name = "GetAssigment")]
-        public ActionResult<AssigmentDTO> Get (Guid id)
+        public ActionResult<AssigmentListStudentsDTO> Get (Guid id)
         {
             if (id == null)
                 return NotFound();

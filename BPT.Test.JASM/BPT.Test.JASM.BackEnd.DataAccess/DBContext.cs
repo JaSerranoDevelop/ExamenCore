@@ -15,8 +15,15 @@ namespace BPT.Test.JASM.BackEnd.DataAccess
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<StudenAssigments>().HasKey(a => new { a.IdAssignments, a.IdStudent });
+        }
+
         public DbSet<Student> Students { get; set; }
         public DbSet<Assignments> Assignments { get; set; }
+
+        public DbSet<StudenAssigments> StudenAssigments { get; set; }
 
     }
 }

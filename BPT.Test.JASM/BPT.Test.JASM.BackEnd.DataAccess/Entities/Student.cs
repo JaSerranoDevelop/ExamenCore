@@ -16,5 +16,7 @@ namespace BPT.Test.JASM.BackEnd.DataAccess
 
         [Required (ErrorMessage = "Date of Birth is required")]
         public DateTime DateBirth { get; set; }
+
+        public virtual ICollection<StudenAssigments> StudenAssigments { get; set; }
     }
 }

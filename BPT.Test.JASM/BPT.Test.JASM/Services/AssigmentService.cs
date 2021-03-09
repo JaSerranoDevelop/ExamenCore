@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using BPT.Test.JASM.BackEnd.DataAccess;
 using BPT.Test.JASM.DTO;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using BPT.Test.JASM.Helpers;
 
 namespace BPT.Test.JASM.Services
 {
@@ -24,11 +26,13 @@ namespace BPT.Test.JASM.Services
             return assigmentsDto;
         }
 
-        public AssigmentDTO GetAssigment(Guid id)
+        public AssigmentListStudentsDTO GetAssigment(Guid id)
         {
             var assigment = _context.Assignments.Where(a => a.Id == id).FirstOrDefault();
-            var assigmentDto = Mapper.Map<AssigmentDTO>(assigment);
-            return assigmentDto;
+            var studentAssigments = _context.StudenAssigments.Include(a => a.Student).Where(a => a.IdAssignments == id);
+
+            var assigmentWhitStudentsDTO = ModelRecordCasting.ToAssigmentWihtListStudents(assigment, studentAssigments);
+            return assigmentWhitStudentsDTO;
         }
 
         public Assignments CreateAssigment(AssigmentDTO studenDTO)
