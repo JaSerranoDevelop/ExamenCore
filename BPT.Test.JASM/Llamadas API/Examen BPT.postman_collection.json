@@ -116,6 +116,27 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44334/api/student/114128A1-EDD6-470D-AFB7-E5B857AEE411",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"student",
+								"114128A1-EDD6-470D-AFB7-E5B857AEE411"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -160,7 +181,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:44334/api/Assigment/db8c622b-6c01-4c31-8d0a-a17aae809564",
+							"raw": "https://localhost:44334/api/Assigment/266324D6-C255-4C47-8D08-4FECD44DB334",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -169,7 +190,7 @@
 							"path": [
 								"api",
 								"Assigment",
-								"db8c622b-6c01-4c31-8d0a-a17aae809564"
+								"266324D6-C255-4C47-8D08-4FECD44DB334"
 							]
 						}
 					},
@@ -250,6 +271,106 @@
 								"api",
 								"Assigment",
 								"db8c622b-6c01-4c31-8d0a-a17aae809564"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student Assigment",
+			"item": [
+				{
+					"name": "Get StudentAssigment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"IdStudent\"   : \"114128A1-EDD6-470D-AFB7-E5B857AEE411\",\r\n  \"IdAssignments\":\"266324D6-C255-4C47-8D08-4FECD44DB334\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/StudentAssigment/114128A1-EDD6-470D-AFB7-E5B857AEE411/266324D6-C255-4C47-8D08-4FECD44DB334",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"StudentAssigment",
+								"114128A1-EDD6-470D-AFB7-E5B857AEE411",
+								"266324D6-C255-4C47-8D08-4FECD44DB334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post StudentAssigment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"IdStudent\"   : \"114128A1-EDD6-470D-AFB7-E5B857AEE411\",\r\n  \"IdAssignments\":\"266324D6-C255-4C47-8D08-4FECD44DB334\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/StudentAssigment/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"StudentAssigment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete StudentAssigment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"IdStudent\"   : \"114128A1-EDD6-470D-AFB7-E5B857AEE411\",\r\n  \"IdAssignments\":\"266324D6-C255-4C47-8D08-4FECD44DB334\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44334/api/StudentAssigment/114128A1-EDD6-470D-AFB7-E5B857AEE411/266324D6-C255-4C47-8D08-4FECD44DB334",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44334",
+							"path": [
+								"api",
+								"StudentAssigment",
+								"114128A1-EDD6-470D-AFB7-E5B857AEE411",
+								"266324D6-C255-4C47-8D08-4FECD44DB334"
 							]
 						}
 					},
